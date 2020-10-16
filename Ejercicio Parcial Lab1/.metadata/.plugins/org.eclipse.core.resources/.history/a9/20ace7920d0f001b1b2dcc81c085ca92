@@ -1,0 +1,23 @@
+/*
+ * ABM.c
+ *
+ *  Created on: Oct 15, 2020
+ *      Author: FRANCO
+ */
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "entidades.h"
+
+void cargarElectros(est_marca marcas[], int LARGO)
+{
+	est_marca marcas[]=
+    {
+        {1, "Whirpool"},
+        {2, "Philips"},
+        {3, "Lalala"},
+        {4, "Sanyo"},
+        {5, "Siam"}
+    };
+
+}

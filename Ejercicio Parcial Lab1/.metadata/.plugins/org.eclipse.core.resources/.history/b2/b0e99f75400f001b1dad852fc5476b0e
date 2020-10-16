@@ -1,0 +1,148 @@
+/*
+ * ABM.c
+ *
+ *  Created on: Oct 15, 2020
+ *      Author: FRANCO
+ */
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "entidades.h"
+#include "ABM.h"
+
+#define LLENO 1
+#define VACIO 0
+
+/*void swap(TipoDato* A,TipoDato* B) /// Mirar el tipo de dato
+{
+    TipoDato aux;
+    aux = *A;
+    *A = *B;
+    *B = aux;
+}*/
+
+/*
+ * int autoincrementarID()
+{
+    int id = 0; // Mirar el valor inicial
+    id++;
+    return id;
+}
+*/
+
+/*
+ * int buscar_Vacio (TipoDato array[],int LARGO)
+{
+    int retorno = -1;
+    int i;
+
+    for(i=0;i < LARGO; i++)
+    {
+        if(array[i].isEmpty)
+        {
+            retorno = i;
+            break;
+        }
+    }
+    return retorno;
+}
+ * */
+
+/*
+ * int inicializar (TipoDato array[],int LARGO,int valor)
+{
+    int i;
+    int retorno = -1;
+    if(array != NULL && LARGO > 0 && valor >= 0)
+    {
+        retorno = 0;
+        for(i=0;i < LARGO; i++)
+        {
+        array[i].isEmpty = valor;
+        }
+    }
+    return retorno;
+}
+ * */
+
+/*
+TipoDato* buscarPorID(TipoDato* array,int LARGO,int id)
+{
+    TipoDato* retorno = NULL;
+    int i;
+
+    if(array != NULL && LARGO > 0)
+    {
+        for(i=0;i<LARGO;i++)
+        {
+           if(array[i].isEmpty!= 0 && array[i].id == id)
+            {
+                retorno = array+i;
+                break;
+            }
+        }
+    }
+    return retorno;
+}
+
+*/
+
+/*int cargarEmpleadoS(empleados array[], int LARGO, int* i)
+{
+	int retorno;
+	int posicion = 0;
+
+	if(array != NULL && LARGO >= 0)
+	{
+			if(buscarEmpty(array, LARGO, &posicion)==0)
+			{
+				array[posicion] =cargarEmpleado(*i);
+				*i = *i +1;
+				retorno = 0;
+			}
+			else
+			{
+				printf("No hay lugar");
+				retorno = -1;
+			}
+	}
+	return retorno;
+}
+ * */
+
+int iniciarlizarElectros (est_electro array[], int LARGO)
+{
+	int retorno = -1;
+	int i;
+	if(array != NULL && LARGO >= 0)
+	{
+		for(i=0;i<LARGO;i++)
+		{
+			array[i].isEmpty = VACIO;
+			retorno = 0;
+		}
+	}
+	return retorno;
+}
+
+int cargarElectrodomesticos(est_electro array[], int LARGO, int* i)
+{
+	int retorno = -1;
+	int posicion = 0;
+
+	if(array != NULL && LARGO >= 0)
+	{
+		/*if(buscarEmpty(array, LARGO, &posicion)==0) //Hacer busar empty e inicializar el array de electros
+		{
+			array[posicion] =cargarEmpleado(*i);
+			*i = *i +1;
+			retorno = 0;
+		}
+		else
+		{
+			printf("No hay lugar");
+			retorno = -1;
+		}*/
+	}
+	return retorno;
+}

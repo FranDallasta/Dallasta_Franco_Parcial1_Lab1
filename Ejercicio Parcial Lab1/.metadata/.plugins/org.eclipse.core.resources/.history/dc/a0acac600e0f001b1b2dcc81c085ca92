@@ -1,0 +1,18 @@
+/*
+ * ABM.c
+ *
+ *  Created on: Oct 15, 2020
+ *      Author: FRANCO
+ */
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "entidades.h"
+
+/*void swap(TipoDato* A,TipoDato* B)
+{
+    TipoDato aux;
+    aux = *A;
+    *A = *B;
+    *B = aux;
+}*/

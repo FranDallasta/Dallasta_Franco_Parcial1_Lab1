@@ -1,0 +1,27 @@
+/*
+ * ABM.c
+ *
+ *  Created on: Oct 15, 2020
+ *      Author: FRANCO
+ */
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "entidades.h"
+
+void cargarElectros(est_electro marcas[], int LARGO)
+{
+	est_electro marcas[]=
+    {
+        {1, "Mesa"},
+        {2, "Azar"},
+        {3, "Estrategia"},
+        {4, "salon"},
+        {5, "magia"}
+    };
+
+    for(int i=0; i < LARGO; i++)
+    {
+    	marcas[i] = sec[i];
+    }
+}

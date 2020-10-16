@@ -1,0 +1,62 @@
+/*
+ * ABM.c
+ *
+ *  Created on: Oct 15, 2020
+ *      Author: FRANCO
+ */
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "entidades.h"
+
+/*void swap(TipoDato* A,TipoDato* B) /// Mirar el tipo de dato
+{
+    TipoDato aux;
+    aux = *A;
+    *A = *B;
+    *B = aux;
+}*/
+
+/*
+ * int autoincrementarID()
+{
+    int id = 0; // Mirar el valor inicial
+    id++;
+    return id;
+}
+*/
+
+/*
+ * int buscar_Vacio (TipoDato array[],int LARGO)
+{
+    int retorno = -1;
+    int i;
+
+    for(i=0;i < LARGO; i++)
+    {
+        if(array[i].isEmpty)
+        {
+            retorno = i;
+            break;
+        }
+    }
+    return retorno;
+}
+ * */
+
+/*
+ * int inicializar (TipoDato array[],int LARGO,int valor)
+{
+    int i;
+    int retorno = -1;
+    if(array != NULL && LARGO > 0 && valor >= 0)
+    {
+        retorno = 0;
+        for(i=0;i < LARGO; i++)
+        {
+        array[i].isEmpty = valor;
+        }
+    }
+    return retorno;
+}
+ * */
