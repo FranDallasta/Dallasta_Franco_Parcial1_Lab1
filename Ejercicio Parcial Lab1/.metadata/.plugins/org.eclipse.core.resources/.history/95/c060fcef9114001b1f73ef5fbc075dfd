@@ -63,36 +63,7 @@ int eliminarElectrodomesticos(est_electro array[], int LARGO,  int pedirId);
 */
 int modificarElectrodomesticos(est_electro array[], int LARGO,  int pedirId);
 
-/*
-* \brief  Permite inicializar un array tipo est_reparacion .
-* \param  array tipo de dato est_reparacion.
-* \param  tipo de dato int.
-* \return un tipo de dato int.
-*/
+
 int inicializarReparaciones (est_reparacion array[], int LARGO);
-
-/*
-* \brief  Permite buscar una posicion vacia en un array tipo est_reparacion.
-* \param  array tipo de dato est_reparacion.
-* \param  tipo de dato int.
-* \param  tipo de dato int*.
-* \return un tipo de dato int.
-*/
 int buscarEmptyReparaciones (est_reparacion array[], int LARGO, int* posicionRep);
-
-/*
-* \brief  Permite cargar un array tipo est_reparacion.
-* \param  array tipo de dato est_reparacion.
-* \param  tipo de dato int.
-* \param  tipo de dato int*.
-* \return un tipo de dato int.
-*/
 int cargarReparaciones(est_reparacion array[], int LARGO, int* i);
-
-/*
-* \brief  Permite mostrar un array tipo est_reparacion.
-* \param  array tipo de dato est_reparacion.
-* \param  tipo de dato int.
-* \return un tipo de dato int.
-*/
-int mostrarReparaciones(est_reparacion array[], int LARGO);

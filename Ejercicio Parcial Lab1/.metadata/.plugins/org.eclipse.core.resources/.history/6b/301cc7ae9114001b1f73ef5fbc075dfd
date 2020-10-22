@@ -79,8 +79,6 @@ do{
 			cargarReparaciones(arrayReparaciones, 10, &id_reparacion);
 			break;
 		case 'h':
-			mostrarReparaciones(arrayReparaciones, 10);
-			system("pause");
 			break;
 		case 'i':
 			printf("Saliendo del programa\n");\

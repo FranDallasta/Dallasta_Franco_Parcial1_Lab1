@@ -19,7 +19,6 @@ int main(void) {
 	char opcion;
 	int id_electrodomestico = 1;
 	int id_baja;
-	int id_reparacion = 1;
 	est_marca arrayMarcas[5];
 	cargarMarcas(arrayMarcas);
 
@@ -76,11 +75,9 @@ do{
 			system("pause");
 			break;
 		case 'g':
-			cargarReparaciones(arrayReparaciones, 10, &id_reparacion);
+			//cargarReparaciones(est_reparacion array[], int LARGO, int* i)
 			break;
 		case 'h':
-			mostrarReparaciones(arrayReparaciones, 10);
-			system("pause");
 			break;
 		case 'i':
 			printf("Saliendo del programa\n");\

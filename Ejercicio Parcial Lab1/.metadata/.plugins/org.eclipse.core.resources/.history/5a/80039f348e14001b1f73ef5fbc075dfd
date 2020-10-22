@@ -111,17 +111,4 @@ void mostrarMarcas(est_marca arrayMarcas[], int LARGO);
 * \return void.
 */
 void mostrarServicios (est_servicio array[], int LARGO);
-
-/*
-* \brief  Permite cargar una reparacion.
-* \param  tipo de dato int.
-* \return tipo de dato est_reparacion.
-*/
-est_reparacion cargarReparacion(int i);
-
-/*
-* \brief  Permite mostrar una reparacion.
-* \param  tipo de dato est_reparacion
-* \return void.
-*/
-void mostrarReparacion(est_reparacion reparacion);
+void cargarReparacion(int i);

@@ -220,7 +220,7 @@ int mostrarReparaciones(est_reparacion array[], int LARGO)
 			{
 				if(array[i].isEmpty != VACIO)
 				{
-					mostrarReparacion(array[i]);
+					 mostrarReparacion(array[i]);
 					retorno = 0;
 				}
 			}

@@ -17,7 +17,7 @@ est_fecha cargarFecha() //carga y valida fecha
 	est_fecha fecha;
 
 	do{
-		printf("\nIngrese el dia: ");
+		printf("Ingrese el dia: ");
 		scanf("%d", &fecha.dia);
 	}while(!(fecha.dia>=1 && fecha.dia <=31));
 
@@ -157,13 +157,4 @@ est_reparacion cargarReparacion(int i)
 	reparacion.fecha_reparacion = cargarFecha();
 	reparacion.isEmpty = LLENO;
 	return reparacion;
-}
-
-void mostrarReparacion(est_reparacion reparacion)
-{
-	printf("\nLa id de la reparacion es:  %d", reparacion.id_reparacion );
-	printf("\nEl numero de serie es de la reparacion es:  %d", reparacion.serie_reparacion) ;
-	printf("\nLa marca de la reparacion es:  %d", reparacion.servicio_reparacion);
-	//fecha
-	mostrarFecha(reparacion.fecha_reparacion);
 }

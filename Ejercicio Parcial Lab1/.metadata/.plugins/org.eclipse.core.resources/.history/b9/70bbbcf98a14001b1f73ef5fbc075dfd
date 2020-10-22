@@ -17,7 +17,7 @@ est_fecha cargarFecha() //carga y valida fecha
 	est_fecha fecha;
 
 	do{
-		printf("\nIngrese el dia: ");
+		printf("Ingrese el dia: ");
 		scanf("%d", &fecha.dia);
 	}while(!(fecha.dia>=1 && fecha.dia <=31));
 
@@ -141,29 +141,4 @@ void mostrarServicios (est_servicio array[], int LARGO)
 				{
 					printf("\nEl servicio de %s (id) %d tiene un precio de $%d ",array[j].desc_servicio, array[j].id_servicio, array[j].precio_servicio);
 				}
-}
-
-//Reparaciones
-
-est_reparacion cargarReparacion(int i)
-{
-	est_reparacion reparacion;
-	reparacion.id_reparacion = i;
-	printf("Ingrese la serie del producto: ");
-	scanf("%d", &reparacion.serie_reparacion); //validar
-	printf("Ingrese la id del servicio (20000 a 20003): ");
-	scanf("%d", &reparacion.servicio_reparacion); //validar
-	printf("Ingrese la fecha de la reparacion: ");
-	reparacion.fecha_reparacion = cargarFecha();
-	reparacion.isEmpty = LLENO;
-	return reparacion;
-}
-
-void mostrarReparacion(est_reparacion reparacion)
-{
-	printf("\nLa id de la reparacion es:  %d", reparacion.id_reparacion );
-	printf("\nEl numero de serie es de la reparacion es:  %d", reparacion.serie_reparacion) ;
-	printf("\nLa marca de la reparacion es:  %d", reparacion.servicio_reparacion);
-	//fecha
-	mostrarFecha(reparacion.fecha_reparacion);
 }

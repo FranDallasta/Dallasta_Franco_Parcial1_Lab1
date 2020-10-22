@@ -197,7 +197,7 @@ int cargarReparaciones(est_reparacion array[], int LARGO, int* i)
 	{
 		if(buscarEmptyReparaciones(array, LARGO, &posicionRep)==0) //Hacer busar empty e inicializar el array de electros
 		{
-			array[posicionRep] = cargarReparacion(*i);
+			array[posicionRep] =cargarcargarReparacion(*i);
 			*i = *i +1;
 			retorno = 0;
 		}
@@ -208,22 +208,4 @@ int cargarReparaciones(est_reparacion array[], int LARGO, int* i)
 		}
 	}
 	return retorno;
-}
-
-int mostrarReparaciones(est_reparacion array[], int LARGO)
-{
-	int i;
-		int retorno = -1;
-		if(array != NULL && LARGO >= 0)
-		{
-			for (i=0; i<LARGO; i++)
-			{
-				if(array[i].isEmpty != VACIO)
-				{
-					mostrarReparacion(array[i]);
-					retorno = 0;
-				}
-			}
-		}
-		return retorno;
 }

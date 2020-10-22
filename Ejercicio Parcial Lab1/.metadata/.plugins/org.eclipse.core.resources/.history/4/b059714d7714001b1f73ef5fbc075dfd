@@ -34,10 +34,9 @@ typedef struct{
 
 typedef struct{
 		int id_reparacion;  // autoincremental ==> es automatico, sube solo
-		int serie_reparacion;
-		int servicio_reparacion; // id del servicio
+		est_electro serie_reparacion;
+		est_servicio servicio_reparacion; // id del servicio
 		est_fecha fecha_reparacion; // dia mes  anio
-		int isEmpty;
 	}est_reparacion;
 
 #endif /* ENTIDADES_H_ */
@@ -95,33 +94,5 @@ void cargarMarcas(est_marca array[]);
 * \return void.
 */
 void cargarServicio (est_servicio array[]);
-
-/*
-* \brief  Permite mostrar las marcas
-* \param  tipo de dato est_marca.
-* \param  tipo de dato int.
-* \return void.
-*/
 void mostrarMarcas(est_marca arrayMarcas[], int LARGO);
-
-/*
-* \brief  Permite mostrar las marcas
-* \param  tipo de dato est_servicio .
-* \param  tipo de dato int.
-* \return void.
-*/
 void mostrarServicios (est_servicio array[], int LARGO);
-
-/*
-* \brief  Permite cargar una reparacion.
-* \param  tipo de dato int.
-* \return tipo de dato est_reparacion.
-*/
-est_reparacion cargarReparacion(int i);
-
-/*
-* \brief  Permite mostrar una reparacion.
-* \param  tipo de dato est_reparacion
-* \return void.
-*/
-void mostrarReparacion(est_reparacion reparacion);

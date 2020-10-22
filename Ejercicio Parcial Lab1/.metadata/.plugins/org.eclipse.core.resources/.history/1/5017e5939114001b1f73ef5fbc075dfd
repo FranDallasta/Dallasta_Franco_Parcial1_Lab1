@@ -158,12 +158,3 @@ est_reparacion cargarReparacion(int i)
 	reparacion.isEmpty = LLENO;
 	return reparacion;
 }
-
-void mostrarReparacion(est_reparacion reparacion)
-{
-	printf("\nLa id de la reparacion es:  %d", reparacion.id_reparacion );
-	printf("\nEl numero de serie es de la reparacion es:  %d", reparacion.serie_reparacion) ;
-	printf("\nLa marca de la reparacion es:  %d", reparacion.servicio_reparacion);
-	//fecha
-	mostrarFecha(reparacion.fecha_reparacion);
-}

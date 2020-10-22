@@ -19,7 +19,6 @@ int main(void) {
 	char opcion;
 	int id_electrodomestico = 1;
 	int id_baja;
-	int id_reparacion = 1;
 	est_marca arrayMarcas[5];
 	cargarMarcas(arrayMarcas);
 
@@ -28,10 +27,6 @@ int main(void) {
 
 	est_electro arrayElectrodomesticos[10];
 	iniciarlizarElectros (arrayElectrodomesticos, 10);
-
-	est_reparacion arrayReparaciones[10];
-	inicializarReparaciones (arrayReparaciones, 10);
-
 do{
 	printf("Ingrese una opcion: ");
 	printf("\na) Dar de alta un electrodomestico ");
@@ -76,11 +71,7 @@ do{
 			system("pause");
 			break;
 		case 'g':
-			cargarReparaciones(arrayReparaciones, 10, &id_reparacion);
-			break;
 		case 'h':
-			mostrarReparaciones(arrayReparaciones, 10);
-			system("pause");
 			break;
 		case 'i':
 			printf("Saliendo del programa\n");\
