@@ -41,58 +41,13 @@ typedef struct{
 
 #endif /* ENTIDADES_H_ */
 
-/*
-* \brief Permite cargar una fecha
-* \return un tipo de dato est_fecha
-*/
 est_fecha cargarFecha();
-
-/*
-* \brief Permite mostrar una fecha.
-* \param tipo de dato est_fecha.
-* \return un tipo de dato est_fecha.
-*/
 void mostrarFecha(est_fecha fecha);
-
-/*
-* \brief Permite cargar una marca.
-* \return un tipo de dato est_marca .
-*/
 est_marca cargarMarca();
-
-/*
-* \brief Permite mostrar una marca.
-* \param  tipo de dato est_marca.
-* \return un tipo de dato est_marca.
-*/
 void mostrarMarca(est_marca compania);
-
-/*
-* \brief Permite cargar un Electrodometico.
-* \param  tipo de dato int.
-* \return un tipo de dato est_electro.
-*/
 est_electro cargarElectrodomestico(int i);
-
-/*
-* \brief  Permite mostrar un Electrodometico.
-* \param  tipo de dato est_electro.
-* \return void.
-*/
 void mostrarElectrodomestico(est_electro aparato);
-
-/*
-* \brief  Permite cargar una Marca.
-* \param  tipo de dato est_marca.
-* \return void.
-*/
 void cargarMarcas(est_marca array[]);
-
-/*
-* \brief  Permite cargar un Servicio.
-* \param  tipo de dato est_servicio.
-* \return void.
-*/
 void cargarServicio (est_servicio array[]);
 void mostrarMarcas(est_marca arrayMarcas[], int LARGO);
 void mostrarServicios (est_servicio array[], int LARGO);
