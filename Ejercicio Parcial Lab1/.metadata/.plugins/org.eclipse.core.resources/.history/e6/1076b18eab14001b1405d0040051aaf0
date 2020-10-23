@@ -1,0 +1,12 @@
+/*
+ * fecha_entidad.c
+ *
+ *  Created on: 22 oct. 2020
+ *      Author: Franco
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "fecha_entidad.h"
+

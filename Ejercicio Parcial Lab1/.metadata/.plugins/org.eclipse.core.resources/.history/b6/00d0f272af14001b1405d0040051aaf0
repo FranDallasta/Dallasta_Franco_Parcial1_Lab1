@@ -1,0 +1,33 @@
+/*
+ * reparacion_entidad.h
+ *
+ *  Created on: 22 oct. 2020
+ *      Author: Franco
+ */
+
+#ifndef REPARACION_ENTIDAD_H_
+#define REPARACION_ENTIDAD_H_
+
+typedef struct{
+		int id_reparacion;  // autoincremental ==> es automatico, sube solo
+		int serie_reparacion;
+		int servicio_reparacion; // id del servicio
+		est_fecha fecha_reparacion; // dia mes  anio
+		int isEmpty;
+	}est_reparacion;
+
+#endif /* REPARACION_ENTIDAD_H_ */
+
+/*
+* \brief  Permite cargar una reparacion.
+* \param  tipo de dato int.
+* \return tipo de dato est_reparacion.
+*/
+est_reparacion cargarReparacion(int i);
+
+/*
+* \brief  Permite mostrar una reparacion.
+* \param  tipo de dato est_reparacion
+* \return void.
+*/
+void mostrarReparacion(est_reparacion reparacion);

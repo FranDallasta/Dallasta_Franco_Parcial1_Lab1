@@ -11,8 +11,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "entidades.h"
-#include "ABM.h"
+#include "fecha_entidad.h"
+#include "marca_entidad.h"
+#include "electro_entidad.h"
+#include "servicio_entidad.h"
+#include "reparacion_entidad.h"
+#include "listado.h"
 
 int main(void) {
 
@@ -42,7 +46,8 @@ do{
 	printf("\nf) Listar los servicios ");
 	printf("\ng) Dar de alta las reparaciones ");
 	printf("\nh) Listar las reparaciones ");
-	printf("\ni) SALIR ");
+	printf("\ni) Acceder a los informes");
+	printf("\ns) SALIR ");
 	printf("\nOpcion seleccionada: ");
 	fflush(stdin);
 	scanf("%c", &opcion);
@@ -83,6 +88,9 @@ do{
 			system("pause");
 			break;
 		case 'i':
+			informar(arrayElectrodomesticos,10,arrayReparaciones,10);
+			break;
+		case 's':
 			printf("Saliendo del programa\n");\
 			system("pause");
 			break;
@@ -92,6 +100,6 @@ do{
 			break;
 	}
 	system("cls");
-  }while(opcion !='i');
+  }while(opcion !='s');
 	return EXIT_SUCCESS;
 }

@@ -1,0 +1,13 @@
+/*
+ * listado.c
+ *
+ *  Created on: 22 oct. 2020
+ *      Author: Franco
+ */
+
+char opcion;
+
+
+do{
+
+}while(opcion != 's');

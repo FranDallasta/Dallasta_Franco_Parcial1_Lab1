@@ -1,0 +1,38 @@
+/*
+ * reparacion_entidad.c
+ *
+ *  Created on: 22 oct. 2020
+ *      Author: Franco
+ */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "reparacion_entidad.h"
+
+#define LLENO 1
+#define VACIO 0
+
+est_reparacion cargarReparacion(int i)
+{
+	est_reparacion reparacion;
+	reparacion.id_reparacion = i;
+	printf("Ingrese la serie del producto: ");
+	scanf("%d", &reparacion.serie_reparacion); //validar
+	printf("Ingrese la id del servicio (20000 a 20003): ");
+	scanf("%d", &reparacion.servicio_reparacion); //validar
+	printf("Ingrese la fecha de la reparacion: ");
+	reparacion.fecha_reparacion = cargarFecha();
+	reparacion.isEmpty = LLENO;
+	return reparacion;
+}
+
+void mostrarReparacion(est_reparacion reparacion)
+{
+	printf("\nLa id de la reparacion es:  %d", reparacion.id_reparacion );
+	printf("\nEl numero de serie es de la reparacion es:  %d", reparacion.serie_reparacion) ;
+	printf("\nLa marca de la reparacion es:  %d", reparacion.servicio_reparacion);
+	//fecha
+	mostrarFecha(reparacion.fecha_reparacion);
+}

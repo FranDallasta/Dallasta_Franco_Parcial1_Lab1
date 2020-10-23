@@ -1,0 +1,16 @@
+/*
+ * marca_entidad.h
+ *
+ *  Created on: 22 oct. 2020
+ *      Author: Franco
+ */
+
+#ifndef MARCA_ENTIDAD_H_
+#define MARCA_ENTIDAD_H_
+
+typedef struct{
+		int id_marca; // comienza en 1000
+		char desc_marca [20];
+}est_marca;
+
+#endif /* MARCA_ENTIDAD_H_ */

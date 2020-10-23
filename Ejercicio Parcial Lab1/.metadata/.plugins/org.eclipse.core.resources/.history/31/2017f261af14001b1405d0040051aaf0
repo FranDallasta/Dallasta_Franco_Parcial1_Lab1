@@ -1,0 +1,43 @@
+/*
+ * electro_entidad.c
+ *
+ *  Created on: 22 oct. 2020
+ *      Author: Franco
+ */
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "electro_entidad.h"
+#include "ABM.h"
+
+#define LLENO 1
+#define VACIO 0
+
+
+
+est_electro cargarElectrodomestico(int i)
+{
+	est_electro aparato;
+	aparato.id_electro = i ;
+	printf("Ingrese la serie del electrodomestico: ");
+	scanf("%d", &aparato.serie_electro);
+	printf("Ingrese la marca por id electrodomestico (1000 a 1004): ");
+	do{
+	scanf("%d", &aparato.id_marca_electro) ;
+	}while(!(aparato.id_marca_electro >=1000 && aparato.id_marca_electro <= 1005));
+	printf("Ingrese el anio de fabricacion: ");
+	do{
+	scanf("%d", &aparato.anio_electro);
+	}while(!(aparato.anio_electro>= 1990 && aparato.anio_electro<=2020));
+	aparato.isEmpty = LLENO;
+	return aparato;
+}
+
+void mostrarElectrodomestico(est_electro aparato)
+{
+	printf("\nLa id es  %d", aparato.id_electro);
+	printf("\nEL numero de serie es  %d", aparato.serie_electro);
+	printf("\nLa marca del producto es %d", aparato.id_marca_electro);
+	printf("\nEl anio de fabricacion es %d", aparato.anio_electro);
+
+}

@@ -1,0 +1,208 @@
+/*
+ * listado.c
+ *
+ *  Created on: 22 oct. 2020
+ *      Author: Franco
+ */
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "fecha_entidad.h"
+#include "marca_entidad.h"
+#include "electro_entidad.h"
+#include "servicio_entidad.h"
+#include "reparacion_entidad.h"
+#include "listado.h"
+
+#define LLENO 1
+#define VACIO 0
+
+void informar (est_electro array[],int LARGO_eletro, est_reparacion arrayReparaciones[], int LARGO_rep)
+{
+	int opcion;
+	int marcaSelec;
+	int electroSelec;
+
+
+	do{
+		system("cls");
+		printf("\n Selecciones una opcion");
+		printf("\n 1) Mostrar Electrodomesticos del anio(modelo) 2020");
+		printf("\n 2) Mostrar Electrodomesticos de una marca seleccionada");
+		printf("\n 3) Mostrar todos las reparaciones efectuadas al Electrodomestico seleccionado");
+		printf("\n 4) Listar los Electrodomesticos que no tuvieron reparaciones");
+		printf("\n 5) Informar importe total de las reparaciones realizadas a un Electrodomestico seleccionado");
+		printf("\n 6) Mostrar el servicio más pedido");
+		printf("\n 7) Mostrar la recaudacion en una fecha en particular");
+		printf("\n 8) Mostrar todos los Electrodomesticos que realizaron una garantia y la fecha");
+		printf("\n 9) Trabajos realizados a Electrodomesticos del anio(modelo) 2018");
+		printf("\n 10) Facturacion total por los mantenimientos");
+		printf("\n 11) Informar la marca de Electrodomesticos que efectuaron más refacciones");
+		printf("\n 12) Listar los Electrodomesticos que recibieron reparación en un fecha determinada");
+		printf("\n 13) Salir de los informes");
+		printf("\n Opcion seleccionada: ");
+		scanf("%d",&opcion);
+
+		switch(opcion)
+		{
+		 	case 1:
+		 		if(mostrarElectros2020(array, LARGO_eletro)==-1)
+		 		{
+		 			printf("\nNo hay electrodomesticos de ese modelo\n");
+		 		}
+		 		system("pause");
+		 		break;
+		 	case 2:
+		 		printf("Ingrese la marca que desea buscar");
+		 		scanf("%d",&marcaSelec);
+		 		if(mostrarElectrosMarca( array, LARGO_eletro, marcaSelec) == -1)
+		 		{
+		 			printf("\nNo hay electrodomesticos de esa marca\n");
+		 		}
+		 		system("pause");
+		 		break;
+		 	case 3:
+		 		printf("Ingrese el electrodomestico que desea buscar");
+		 		scanf("%d",&electroSelec);
+		 		if(mostrarElectrodomesticoReparado(array, LARGO_eletro, arrayReparaciones, LARGO_rep, electroSelec) == -1)
+		 		{
+		 			printf("\nNo tiene ninguna reparacion hecha\n");
+		 		}
+		 		else if(mostrarElectrodomesticoReparado(array, LARGO_eletro, arrayReparaciones, LARGO_rep, electroSelec) ==-2)
+		 		{
+		 			printf("\nNo existe ese electrodomestico\n");
+		 		}
+		 		system("pause");
+		 		break;
+		 	case 4:
+		 		break;
+		 	case 5:
+		 		break;
+		 	case 6:
+		 		break;
+		 	case 7:
+		 		break;
+		 	case 8:
+		 		break;
+		 	case 9:
+		 		break;
+		 	case 10:
+		 		break;
+		 	case 11:
+		 		break;
+		 	case 12:
+		 		break;
+		 	case 13:
+		 		printf("Saliendo del programa\n");\
+		 		system("pause");
+		 		break;
+		 	default:
+		 		printf("Opcion Incorrecta\n");
+		 		system("pause");
+		 		break;
+		}
+		system("cls");
+	}while(opcion != 13);
+}
+
+int mostrarElectros2020(est_electro array[],int LARGO_eletro)
+{
+	int i;
+	int retorno = -1;
+	if(array != NULL && LARGO_eletro >= 0)
+	{
+		for (i=0; i<LARGO_eletro; i++)
+		{
+			if(array[i].isEmpty != VACIO)
+			{
+				if(array[i].anio_electro == 2020)
+				{
+					mostrarElectrodomestico(array[i]);
+					retorno = 0;
+				}
+			}
+		}
+	}
+	return retorno;
+}
+
+int mostrarElectrosMarca(est_electro array[],int LARGO_eletro, int marcaSelec)
+{
+	int i;
+	int retorno = -1;
+	if(array != NULL && LARGO_eletro >= 0)
+	{
+		for (i=0; i<LARGO_eletro; i++)
+		{
+			if(array[i].isEmpty != VACIO)
+			{
+				if(array[i].id_marca_electro == marcaSelec)
+				{
+					mostrarElectrodomestico(array[i]);
+					retorno = 0;
+				}
+			}
+		}
+	}
+	return retorno;
+}
+
+int mostrarElectrodomesticoReparado(est_electro aparato[], int LARGO_eletro, est_reparacion arrayReparaciones[], int LARGO_rep, int electroSelec)
+{
+	int i;
+	int retorno = -2;
+	if(aparato != NULL && LARGO_eletro >= 0 && arrayReparaciones != NULL && LARGO_rep >= 0)
+	{
+		for (i=0; i<LARGO_eletro; i++)
+		{
+			if(aparato[i].id_electro == electroSelec && aparato[i].isEmpty != VACIO)
+			{
+				/*printf("\nEl aparato buscado es: ");
+				printf("\nLa id es  %d", aparato[i].id_electro);
+				printf("\nEL numero de serie es  %d", aparato[i].serie_electro);
+				printf("\nLa marca del producto es %d", aparato[i].id_marca_electro);
+				printf("\nEl anio de fabricacion es %d", aparato[i].anio_electro);
+				printf("\n======================================");*/
+				retorno = -1;
+				int j;
+				for (j=0; j<LARGO_rep; j++)
+				{
+					if(arrayReparaciones[j].isEmpty != VACIO && arrayReparaciones[j].serie_reparacion == aparato[i].serie_electro)
+					{
+						printf("\nReparacion num %d ", j);
+						printf("Servicio %d", arrayReparaciones[j].servicio_reparacion);
+						retorno = 0;
+					}
+				}
+			}
+		}
+	}
+	return retorno;
+}
+
+int mostrarElectrodomesticoReparado(est_electro aparato[], int LARGO_eletro, est_reparacion arrayReparaciones[], int LARGO_rep)
+{
+	int i;
+	int retorno = -1;
+	if(aparato != NULL && LARGO_eletro >= 0 && arrayReparaciones != NULL && LARGO_rep >= 0)
+	{
+		for (i=0; i<LARGO_eletro; i++)
+		{
+			if(aparato[i].isEmpty != VACIO)
+			{
+				int j;
+				for (j=0; j<LARGO_rep; j++)
+				{
+					if(arrayReparaciones[j].isEmpty != VACIO && arrayReparaciones[j].serie_reparacion != aparato[i].serie_electro)
+					{
+						printf("\nElectrodomestico no reparado num %d ", j);
+						printf("ID: %d",aparato[i].id_electro);
+						retorno = 0;
+					}
+				}
+			}
+		}
+	}
+	return retorno;
+}
+

@@ -1,0 +1,16 @@
+/*
+ * listado.h
+ *
+ *  Created on: 22 oct. 2020
+ *      Author: Franco
+ */
+
+#ifndef LISTADO_H_
+#define LISTADO_H_
+
+
+
+#endif /* LISTADO_H_ */
+
+void informar (est_electro array[], LARGO_eletro);
+int mostrarElectros2020(est_electro array[], LARGO);

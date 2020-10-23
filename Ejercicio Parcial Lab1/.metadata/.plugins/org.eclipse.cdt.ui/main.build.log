@@ -1,9 +1,8 @@
-16:05:46 **** Incremental Build of configuration Debug for project main ****
+21:41:23 **** Incremental Build of configuration Debug for project main ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\entidades.o" "..\\src\\entidades.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ABM.o" "..\\src\\ABM.c" 
-gcc -o main.exe "src\\ABM.o" "src\\entidades.o" "src\\main.o" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\listado.o" "..\\src\\listado.c" 
+gcc -o main.exe "src\\electro_entidad.o" "src\\fecha_entidad.o" "src\\listado.o" "src\\main.o" "src\\marca_entidad.o" "src\\reparacion_entidad.o" "src\\servicio_entidad.o" 
 
-16:05:53 Build Finished. 0 errors, 0 warnings. (took 6s.665ms)
+21:41:30 Build Finished. 0 errors, 0 warnings. (took 7s.71ms)
 

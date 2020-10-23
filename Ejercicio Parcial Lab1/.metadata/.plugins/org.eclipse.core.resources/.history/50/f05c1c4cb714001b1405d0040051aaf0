@@ -1,0 +1,24 @@
+/*
+ * listado.h
+ *
+ *  Created on: 22 oct. 2020
+ *      Author: Franco
+ */
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "fecha_entidad.h"
+#include "marca_entidad.h"
+#include "electro_entidad.h"
+#include "servicio_entidad.h"
+#include "reparacion_entidad.h"
+#include "listado.h"
+#ifndef LISTADO_H_
+#define LISTADO_H_
+
+
+
+#endif /* LISTADO_H_ */
+
+void informar (est_electro array[], LARGO_eletro);
+int mostrarElectros2020(est_electro array[], LARGO);
